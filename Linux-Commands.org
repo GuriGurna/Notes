@@ -1,0 +1,175 @@
+* General Command
+1. *w* :: 
+
+* File System
+1. ls: The ls command is used to list directories and files.
+    - Basic command to list files and directories exclusing hidden files:
+    ```$ ls```
+
+    - List all the files with hidden files and directories that will be denoted as . at the start of the file or directory names.:
+    ```$ ls -a```
+    
+    - Use -la flag to list all the files with their permission details:
+    ```$ ls -la```
+
+2. mkdir The mkdir (make directory) command allows users to create directories or folders.
+
+    ```
+    $ mkdir mydir
+    $ ls
+    mydir
+    ```
+
+    - The flag '-p' is used to create multiple directories or parent directories at once.
+    ```
+     $ mkdir -p dir1/dir2/dir3
+    $ cd dir1/dir2/dir3
+    ~/home/nirjas/dir1/dir2/dir3$
+    ```
+3.  rmdir ::used for removing directories 
+        -p : to remove multiple directories
+
+
+4.   rm: to remove files directories from file system 
+       * to remove file 
+        rm<file name>
+
+      * to remove directories 
+      rm -r
+
+      * to remove directory forcefully 
+      rm-rf
+
+      * to remove file forcefully 
+      rm -f 
+
+5.touch : to create new files or rename time stamps 
+     * create file 
+       touch file.txt
+
+     * change acess time 
+     touch -a file.txt 
+
+     *  change modification time 
+      touch-m file_name 
+
+      * use timestamp of other file 
+      touch -r file2 file1 
+
+6. cp : to copy file and directory 
+     * to copy file 
+     cp file1 
+
+     * to copy directory 
+     cp -r directory1
+
+ 7. mv : to remove or rename directory 
+      * rename files 
+       mv oldname newname 
+      * move files 
+      mv file.txt
+      * move without overridding 
+
+      mv-imy files 
+
+8. cat : to view content of a file 
+       cat file
+
+9. file : to know file type 
+    file file1.txt 
+
+10. cut : to extract the text from file 
+      cut -c 4 file.txt 
+
+11. paste : merges the lines of file 
+     paste -s file.txt 
+
+12. head : to view first ten lines of the file 
+13. tail : for last ten lines 
+14. less : to view context as filed manner 
+
+15. expand : to change tabs into spaces 
+     expand file.txt
+
+      *unexpand : to change spaces into the tabs 
+       unexpand -a file.txt 
+
+16.sort :to sort lines in text files       
+      sort file.txt
+
+      reverse sort 
+      sort -r file.txt 
+
+17.tr : to translate set of characters to anothers 
+
+18. uniq : to remove duplicate text
+     uniq file.txt
+
+19. wc : to show the count of words or lines 
+
+20. grep : filtering of the commands 
+       * matching character with word 
+         grep "..rent" file.txt
+
+    bracket expressions 
+     grep "sw[ea]t " file.txt
+
+permission commands 
+r : read     
+w : write 
+e : execute 
+- : no commands 
+   
+  21. changing permission 
+   * chmod to change file or directory permission 
+   ** absolute mode
+   4 read 
+   2 write 
+   1 execute 
+
+   * symbolic mode 
+   ** changing permission for specific owners 
+   u :user 
+   g:group 
+   o:other 
+   a:all 
+
+   22. changing ownership 
+
+     * user ownership 
+     chown user file
+     * group ownership  
+     chgrp groupname file 
+
+
+23. networking commands 
+
+ ifconfig : used to view all network interface 
+
+ ifup and ifdown : to enable or disable network 
+
+
+ 24. route command : to add or delete route 
+       sudo route -n
+
+ 25. ping : to track the route 
+    ping google.com
+
+ 26. mananning packages 
+
+  *install package 
+  sudo yum install package_name    
+
+  *package discription 
+  yum info package_name 
+
+  *uninstall package 
+  sudo yum remove package_name
+
+  *search package 
+   yum search keyword
+
+   *update package 
+    yum check update
+
+   *

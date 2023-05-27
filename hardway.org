@@ -1,0 +1,273 @@
+* excersice 2
+  comments and pound characters 
+  commenrts are used to disable any line of code or used to mention any type of information about the code 
+  # symbol is used to mark any comment  
+
+* excersice 3 
+  numbers and math 
+  + plus or additon 
+  - minus 
+  / slash
+  * asterisk 
+  % percent 
+  < less than 
+  > greater than 
+  <= less than equal 
+  >= greater than equal 
+
+
+ * 4 variables and names 
+   variables are used as names given for something to get familier with the purpose of code 
+   _ is called underscore character used for imaginary space betweeen variables 
+
+   name="guri"
+   number=74
+   first_name = "Maninder"
+   last_name = "Singh"
+   firstName="Maninder"
+   1Name=23 # invalid variable name
+
+* 5 more variables and printing 
+  variables are embedded inside the string by using {} 
+  string must start with f before the "" which string need to be formatted     
+
+* 6 strings and text 
+  string is basically the text that we want to disply to others 
+  these are inside the ""  ''
+  contain numbers of variables 
+  format can also be done by .format()
+* 9 
+   \n is used for printing the text in the new line 
+
+   """ is used for writing string in multiple lines 
+
+* 10       
+   escape sequences          functions 
+   \\                       backslash \ 
+   \'                        single quote '          
+   \"                       double quote "                     
+   \a                       BEL                   
+   \b                       BS                     
+   \f                       FF 
+   \n                       LF  
+   \N                       unicode only    
+   \r                       CR     
+   \t                       TAB    
+   \uxxxx                   character with 16 bit hex value xxxx   
+   \Uxxxxxxxx               character with 32 bit hex value xxxxxxxx    
+   \v                       VT    
+   \ooo                     character with octal vlaue ooo     
+   \xhh                     character weith hex vlaue hh 
+
+
+* 11 
+   put end = '' at the end of each print line to not end the line with a new line character and go to the next line .         
+   int(str) used to convert string to int and vice versa 
+   input() to take input from the user 
+
+* 12 
+  y = input("name ? ") is used to directly write the strign inside the input 
+
+
+* 13 parameters , unpacking , variables 
+    argv is the argument variable which holds the arguments which we pass topython script when we run it 
+    unpacking is assigning  variables to it 
+
+* 15 reading files 
+   txt = open(filename)
+   print(txt.read())
+    is ued to open any file and read the informastion with in it. 
+
+* 16 reading and writing files 
+   commands 
+   .read  = read the contexts of file 
+   .readline = read just one line of the line 
+   .truncate = empties the file 
+   .write('stuff'): write stuff to the line . 
+   .seek(0): moves the read / write location to the beginning of the file.
+   .close = cloes es the file     
+
+* 18 
+     def is used for making a function 
+     
+* 20 f.seek (0) is used for moving to the starting of the file  
+          
+* 27 
+    not                    true 
+    ----------------------------
+    not false              true
+    not true               false
+
+    or                     true
+    ----------------------------
+    true or false          true    
+    true or ture           true 
+    false or ture          true
+    false or false         false
+
+    and                    ture
+    ---------------------------
+    true and false         false
+    true and true          true
+    flase and true         false
+    false and false         false
+
+     not(true or false )    false 
+     not(true or true)      false 
+    not(false or ture  )    false
+    not(false or false)     true
+
+
+    !=                  true
+    ------------------------
+    1 !=0               true
+    1 !=1               false
+    0 !=1               true
+    0 !=0                false
+
+
+    ==                  true
+    ------------------------
+    1==0                false
+    1==1                 true
+    0==1                 false
+    0==0                 true
+
+
+* 29 what if 
+    if function is used for verfying if something is true and print the given ststement 
+    if it is true 
+
+    : colon is used branching code under if statement 
+
+* 30 
+    elif is used if (if ) statement goes wrong 
+    there can be multiple elif functions
+    onece a statement becomes true the function stops and print given statement 
+    else is used either after if or elif depending on the number of the functions and end the  code 
+
+* 33 
+   list are made by inserting variables in []
+   loops are used for continuing printing the elements of the list 
+   while and for are two types of loops 
+   .append() is used for inserting values to the list           
+
+* 34 
+    in lists numbering starts from 0 
+    so for first element the number is 0 
+    and so on  
+
+* 36
+    * rules for if statements
+   - every if statement should have else 
+   -use good name for the variable for booleans if they are complex 
+    
+    * while and for loops 
+   use while loop only to loop forever 
+   whereas use for loop for other kind of looping for fixed or limited number of things 
+
+    debugging 
+    always write little code and check and run it 
+
+* 37 symbols 
+
+   * key words 
+
+    keyword with description
+   and - logical and 
+   as- part of with as statement 
+   assert - ensure someting is true 
+   break - stops the loop 
+   class-  define a class
+   continue - doing again 
+   def -  define a function
+   del - delete from dictionary 
+   elif - else if condition 
+   else - else condition
+   except - use to make error forever
+   exec - run a string 
+   finally - completing particular thing 
+   for - use in loop 
+   from - import parts of  modules 
+   global - declare use of a global variable 
+   if - if condiotin 
+   import - import a module 
+   in -  part of loops 
+   is - to test equality 
+   lambda - create short function 
+   not - logica lnot 
+   or - logical or 
+   pass - block is empty 
+   print - print a string 
+   raise - raise an exception when value goes wrong  
+   return - exit function with return value 
+   try - try a block
+   while - while loop
+   with - with as in used
+   yield - pause and return to caller 
+
+   * data types 
+
+   true  - boolean 
+   false - boolean 
+   none - no value 
+   bytes - store bytes , maybe of text ,png ,file etc 
+   strings - stores info 
+   numbers - store integers 
+   floats - decimals 
+   lists - stores a list of things 
+   dicts - stores key and values 
+
+   * operators
+   ** power of 
+   // - flooor division 
+   () = parentheissn 
+   [] = list bracketes 
+   {} = dict curly braces 
+   @ = at decorators 
+   += add and assign 
+   
+
+* 39
+  dictionaries
+  it holds keys and their values 
+
+*40  
+  modules , classes , objects
+   * modules are like dictionaries which holds values 
+    .key syntax is used to get any value frok it .
+   * classes are used for making grouping of functions and data and can acess them with the .(dot)operator 
+    class mystuff(object):
+      def __init__(self):
+         self.tangerine = "and now a thousand years between"
+
+      def apple(self):
+         print("i am classy apples!")
+   *instantiation is creating an object from the class
+
+* 41 
+  class x(object):def__init__(self,j)"class x has a__init__that takes self and j parameters."
+  class x(object):def M(self,j)"class x has a function named m that takes self and j parameters self,j."
+  foo = x() "set foo to an instance of class x."
+  foo.m(j)"from foo,get the function , and call it with parameters self,j."
+  foo.k = q"from foo ,get the k attribute and set it to q "
+
+* 42 
+   is-a ,has-a ,objects ,and classes 
+   super. is used to run any function from a parent class
+   is-a is used to represent the object representing the class 
+   has a is used to represent the attributes of the class
+   
+ * 44 
+  **implicit inheritence
+     in this type pf inheritence the child class inherit the function of parent class and runs it
+
+  ** override explicity
+  in this type of inherittnce if the fuction is orleady present in the child class it overrides the parent function.
+
+  ** after before or after 
+   in this type we can use super.function to call the parent function whenever needed and overrides the child class
+
+   def __init__(self):
+      self.class = class()
+   self.class.function() can also be used to run a parent function  
