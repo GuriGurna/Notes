@@ -1,120 +1,144 @@
 * Lecture 1
-  *skills
-   computational thinking
-   to understand code 
-   understand abilities and limits 
-    
-  computation type
-  declarative and imperative
 
-  *memory contains 
-    control centre - set of instructions 
-    airthmetic logic unit-converts input into output
-    program counter -helps changing the instructions 
+** computation
+- computation  is of two types:
+- declarative 
+- imperative = how to do something 
 
-  *good set of primitives helps programmer to build a good program 
+** earliest computeers = having fixes programs
+- calculators do specific problems
 
-  *python 
-  high lvl language - more advanced set of primitives are used as used in low lvl language 
-  general lvl language 
-  interpreted language understand-uses code and run the program rather than going through compiler and 
-    catching the bugs
+** stored program computer 
+- take input from the used and perform accordingly
+
+** memory contains 
+- control centre - set of instructions 
+- airthmetic logic unit-converts input into output
+- program counter -helps changing the instructions 
+
+** fixed set of primitives helps programmer to build a good program 
+
+** python 
+- python is a high lvl language - more advanced set of primitives are used as used in low lvl language 
+- general lvl language 
+- interpreted language understand-uses code and run the program rather than going through compiler and 
+  catching the bugs
   
-  *syntax -how to put together the expressions or informatrion
-  *static sematics - helps to understandwhat programs are meaningful 
-  *sematics - what happens whhen we run code 
+** syntax -how to put together the expressions or informatrion
 
-  *values 
-   numbers or integers 
-   string - set of characters 
+** static sematics - helps to understand which programs are meaningful 
 
-   *operators
-   +-*
+** full sematics - what does program means and what happen when we run it  
 
-   *comments - use for mentioning any type of information 
-    # is used to write any comment 
+** two types of values 
+- numbers- integers or float 
+- string - set of characters 
 
+** operators
+   + - * / 
 
-* lecture  2 
-    string contains the data 
-    interpreter evalutes and print the code
-    statemts = legal commands that python can interpret  
-     ** print , assignment
-    variables name = should be familier to the point
+* Lecture 2
 
-    * branching program 
-    can change the order of instruction based on the text (usually value of variable)
-  
-    if <some text >:
-       set of instruction 
-    else :
-      set of instructions      
+** combine in expression : operands and operators
 
-   * boolean combination
-    and or not 
-    types = true false    
+** variables have dynamic values 
+- that it changes its value to the newest value assign to it 
+x = 1 (create variable x and assign value 1 to it )
+x=x*x (bind x to 9 )
 
- * lecture 3
-      data = numbers , strings , boooleans 
-      commands = conditionals  , input and output , assignment , loop mechanicms
-      operators  = +-and or 
-      
+** statements 
+- legeal commands that python can intrepet 
+- print , assignment etc 
 
-      *iterative programs 
-      choose variable that count 
-      initilise outisde the loop
-      set up end test variable 
-      change variable 
-      what t do when done 
+** variables names   
+-28 keywords block 
 
+** branching program
+- can change the orfer of instructions based on a test
+- if and else statements 
+- if values is tre it follow series of instruction 
+- otherwise it will follow other instructions
 
-      * exhaustive enumeration 
-       trying all the reasonable values until you find the solution 
+if :
+    block of commands 
 
-     * tuple 
-       it is an ordered sequence of the elements 
-       it is enclosed by the bracketes with values in it 
-       test [1,2,3,4,5]
+else:
+    block of commands 
 
-       selection test[2]
-       selection test[3:4]
+** boolean combination 
+- and , or , not 
 
-       it also work with strings like selection and slicing of strings 
-       s1 = asdfghj
+** iteration or loops 
+while loop 
 
-       s1[2]  
+* Lecture 3
 
-* lecture 4 
-   not easy to understand several lines of code and what their use 
-   not having decomposition and abstraction 
+** iterative program
+- choose variable that count
+- initilise it outside the loop
+- set up end test (variable)
+- construct block of code 
 
-   *solution is to add function to it 
-     helps in creating modules     
-     supress detail 
-     and to create new perimiteres 
+** steps 
+- ans =0
+- ans*ans<=0
+- if yes then  ans = ans + 1
+- if no then print ans and stop
 
-    def = keyword    (define)
-    return = keyword
-    none = special value 
+x = 16
+ans = 0
+while ans*ans < x :
+    ans = ans + 1
+print ans 
 
-    imvoke the function by passin in values for the paremeters 
-    sqrt(16)  it binds x to 16 locally 
-    local bindings does not affect any global bindings 
-    
-    interpreter are global binding
+** exhaustive enumeration
+-trying all the reasonable values unit get the solution
 
+x = 10
+i = 1
+while i<10:
+    if x%i==0:
+        print desirable , i
+    i = i + 1
 
-    * farm yard problem = 
-      farmer observers 20 heads and 56 legs 
-      including chickens and pigs 
-      let 
-      no of pigs + no of chickens = 20
-      4 no of pigs  + 2 no of chickens = 56
+** for loop
+for <value> in range <end point>:
 
-      brute force algorithim 
+** tuple 
+- ordered sequence of elements 
+- cannot change it 
+- represent ny (1,2,3,4)
+- for first element [0]
+- for last element[-1]
+- for more than 1 indexes [1:3]
 
-     * recursion
-      base case = which is simpliest solution 
+** strings also support slicing , selection of particular elements 
 
-      inductive step 
-        which is breaking the problem into simple version of same problem with other steps  
+* Lecture 4
+
+** Decomposition 
+- it is breaking of code into different modules
+- each module make its own sence and can run independently
+
+** abstraction 
+
+** functions 
+- let us break into modules
+- make us supress details 
+
+** def - creating a function 
+- followed by a name 
+- then we have (x) 
+- x is an input we take from the user and will  be used everywhere it is seen in the function  
+
+** return 
+- it stops the whole computation and return the value of it 
+
+** none 
+- when return none is used it does not return any value from it 
+- any bindings in the function to a particular variable will not affectg and golabal binding int he while code 
+ 
+** recursion 
+- taking a problem and breaking into steps and adding some stps for execution 
+- inductive step 
+- break problem into the simpler version of same problem and add some other steps 
