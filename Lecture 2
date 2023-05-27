@@ -1,0 +1,31 @@
+* combine in expression : operands and operators
+
+* variables have dynamic values 
+- that it changes its value to the newest value assign to it 
+x = 1 (create variable x and assign value 1 to it )
+x=x*x (bind x to 9 )
+
+* statements 
+- legeal commands that python can intrepet 
+- print , assignment etc 
+
+* variables names   
+-28 keywords block 
+
+* branching program
+- can change the orfer of instructions based on a test
+- if and else statements 
+- if values is tre it follow series of instruction 
+- otherwise it will follow other instructions
+
+if :
+    block of commands 
+
+else:
+    block of commands 
+
+* boolean combination 
+- and , or , not 
+
+* iteration or loops 
+while loop 

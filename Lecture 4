@@ -1,0 +1,27 @@
+* Decomposition 
+- it is breaking of code into different modules
+- each module make its own sence and can run independently
+
+* abstraction 
+
+* functions 
+- let us break into modules
+- make us supress details 
+
+* def - creating a function 
+- followed by a name 
+- then we have (x) 
+- x is an input we take from the user and will  be used everywhere it is seen in the function  
+
+* return 
+- it stops the whole computation and return the value of it 
+
+* none 
+- when return none is used it does not return any value from it 
+
+-any bindings in the function to a particular variable will not affectg and golabal binding int he while code 
+ 
+* recursion 
+- taking a problem and breaking into steps and adding some stps for execution 
+- inductive step 
+- break problem into the simpler version of same problem and add some other steps 
