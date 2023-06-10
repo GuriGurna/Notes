@@ -120,7 +120,7 @@ for <value> in range <end point>:
 - it is breaking of code into different modules
 - each module make its own sence and can run independently
 
-** abstraction 
+** Abstraction 
 
 ** functions 
 - let us break into modules
@@ -134,11 +134,236 @@ for <value> in range <end point>:
 ** return 
 - it stops the whole computation and return the value of it 
 
-** none 
+** None 
 - when return none is used it does not return any value from it 
-- any bindings in the function to a particular variable will not affectg and golabal binding int he while code 
+- any bindings in the function to a particular variable will not affectg and global binding int he while code 
  
-** recursion 
+** Recursion 
 - taking a problem and breaking into steps and adding some stps for execution 
 - inductive step 
 - break problem into the simpler version of same problem and add some other steps 
+
+* Lecture 5
+
+** Arbitiairy piecision 
+- L is used for long int values 
+
+- 1<= mantissa < 2 
+- mantissa exponent in range -1022 to 1023
+- 1 bit sign 
+- 11 exponent
+- 52 bit mantissa 
+
+** repr()
+- it represents the int value as string
+- and round offf float values to the 17th value 
+- print also round off any float value 
+
+** Import math 
+- helps to perform the basic functional of maths like sqrt etc
+
+** == in float produces error 
+- might not be an exact number 
+- cannot enumerate all the guesses or incountable 
+
+** Sucessive approximation 
+- start with initial guess 
+- choose rangr line (100)
+- if f(guess) close guess return guess 
+- else get better guess 
+
+** Bisection method
+- to guesss the answwr in the middle and search wheather it is on right oer left \
+
+* Lecture 6
+
+** Non scalar two types
+- tuples add  strings 
+- both are immutable
+- and cannot be changed
+- however new one can be made with slight changes 
+
+** Mutuable
+- lists 
+- lists are mutuable that they can change
+- tech = ['mit' ,'caltech']
+- ivys  =['h',' y ','b']
+- univs= []
+- univs.append(tech) =  is used to append any list 
+- list.remove("string") = is used to remove any strign from the list
+- list[0] = will givews the first element of the lsit 
+
+
+* Lecture 7 
+** Lists 
+-  are mutuable 
+- if we assign a new value to any index in a lsit the old value will be replaced 
+- if we make  a new list and make  it equal to the old list and change any element of old list same will be happen ewith new one 
+
+** Distionaries 
+-  are mutuable 
+- but are not in order
+- it has key as index 
+- <key,value>
+
+** Efficiency 
+- it includes the choice of efficiency 
+- map the problems into class algorithm
+- how much memory is need to complete the program 
+- space and time 
+- what is the number of basic strps needed as a function input size 
+
+** Random access model 
+- best case - minimum steps
+- worst case - most step 
+- expected case - avg
+
+* Lecture 8 
+- as rate of growth goes size of problem also grows
+- asymptatic notation
+- big of notation - upperlimits to growth of function as input get large 
+
+- n=1000   nanosecond speed
+- log      10 nanosecond 
+- linear   1 microsecond 
+- quadratic   1 millisecond 
+- exponential  10^284 years  
+
+** Ordders of growth
+- in some cases quadratic my run in less time than linear 
+- it all depends upon the type of the input 
+
+** search a sorted list 
+
+def search(s, e):
+    answer = None
+    i = 0
+    numCompares = 0
+    while i < len(s) and answer == None:
+        numCompares +=1
+        if e == s[i]:
+        answer = True
+        elif e < s[i]:
+        answer = False
+        i += 1
+    print answer, numCompares
+
+
+* lecture 9
+
+** Binary search      
+- take a sorted list 
+- take a element from the list which is mid point of list 
+- last-first/2 
+- if the element which have to be find is less than the mid  element then we can cut the upper half of the list and vise versa 
+ 
+** Implement List  
+- Making memort cells in the list 
+- if one memory cell conatain 4 elements then we have to ass 4 to move to second celll 
+
+** Linked List 
+- start from begining 
+- setting a particular number of lements to jump to a desired element 
+
+** Generalixe Binary Search 
+- pick the mid point
+- check to see if this is the answer
+- if not reduce to smaller problem and repeat 
+
+** How to sort the list before the search 
+- we cannot look at the list sub linear time 
+- nor can sort in linerar time
+
+*** time tke to types of searches
+- first case is linear case in which we directly search in case of unordered list 
+- second is first we sort ans then search 
+    which take n log n time - which is takes larger time than the linear search 
+
+** How to sort a list 
+*** Loop type
+- pick th first elemtnt and compare with the next elements 
+- if the element is larger then any of the element in the list 
+- than that element will be swapped and which further will comapre with rest of the list 
+- this menthod will  be continued for all the elements in the list until the list get sorted 
+
+* Lecture 10 
+
+** Divide and Conquer algorithm 
+- split the problem into several sub problems of same type 
+- solve independtyly 
+- combine sloutions
+
+** Merge sort
+- order of complexicity is n which is sum of no of elemets in the list
+- divide th elists into half
+- divide again until we have single lists 
+- in this we compares the first elemts of both the lists and Merge them into the new list 
+- in same way we put all the elemts in the new list 
+
+** Difference between assert and exception
+
+*** Assert 
+- if conditions are true then the code will run otherwise it will throws error
+
+*** Exception
+- if anything happen exception will automaticalyl handle the error
+
+
+* Lecture 11
+
+** Debbuging 
+- process of assertaining why the program is failing 
+- function = is the code is giving the answer we are especting 
+- performance = is the program working with efficiency of time 
+
+** Defensive Programming 
+- includes both validation and debugging 
+
+** Testing 
+- we comape the input and outputs pairs 
+
+*** Two classes of testing 
+**** Unit Testing 
+- evalidate each piece of code independently 
+
+**** Integration testing 
+- check whole the working of program 
+
+** Test Suite 
+- small piece of code to check 
+
+** Methods or  tools for error free code 
+- Print statements
+- reding the code
+- be systematic 
+- reduce search space
+- localize souce of problem 
+- how cound it have produce this result
+*** Scientific method
+- study available data 
+- test resutls 
+- always know what answer one is especting from the program
+- find the simpliest form of input 
+
+
+* Lecture 12 
+
+** Debugging 
+- make sure that you can revert
+- saving old version 
+
+** Optimizaton Problems 
+- A function to maximise or min 
+- A set of constrains 
+- find the shortest path 
+
+*** Bin Packing 
+- settign up different part or lines in a sequence of manner 
+- Sequence alignment 
+- Problem Reduction 
+
+
+** Dynamic Programming
+- overlapping sub - problems
+- optimal substructure 
+

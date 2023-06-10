@@ -1,0 +1,14 @@
+* List 
+** Different ways of cloning or copying a list 
+*** .copy() 
+- it helps to copy a list into new list and both the lists are independent of each others. 
+
+*** list[:]
+
+*** List(list_name)
+
+*** loop method 
+- first find the number of elements in a list and then apeend each element into the copied list 
+
+*** constrcutor (=)
+- make new list and make it equalS to the original list 
