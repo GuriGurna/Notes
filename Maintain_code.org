@@ -1,0 +1,35 @@
+*  Methods of maintaining clean code 
+
+** Give meaningful names 
+- names given to the variables , classes or functions should be meaningful , intention reveling and esaliy pronounceable 
+
+** Comments 
+- only use comments when necessary 
+- comments should be updated according to the changes made in the code 
+- well placed 
+
+** Repeted code 
+- do not repeat the code
+- there should not be two funtions doing same thing 
+ 
+** *Follow code patters 
+- always use the same standardliziation of letters throughout the code 
+- use same caseletters if updating any code 
+
+** Boy scout rule 
+- always make code more cleaner then before it was used 
+
+** Error handling 
+- when code make any error you should be ready to handle it 
+
+** Test case 
+- always make test cases of code and the code should able to pass throught it 
+- it should not take time to execute the tests 
+
+** Make function small 
+- Functions should be samll 
+- otherwise should be divided into the sub parts 
+
+** Code like book 
+- code should be easily understadable and readiable 
+- ans should be well strucutred 

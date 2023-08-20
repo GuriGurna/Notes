@@ -1,0 +1,75 @@
+* Exception handling in python 
+
+- there ar emany types of errors that may occured in the program 
+- we use try statemetn for handling the errors
+- the code is written in the except section for handling 
+
+
+* We can raise exception error 
+
+- using raise keyyord in python
+
+
+* Try with else clause 
+
+- if the programs runs without throwing the error we can use else 
+- and can write anything in it to check  if try runs ssucessfully
+
+
+* Try with finally
+
+- it runs errrespective of the exception if any error occured
+
+
+* if __name__ == '__main__'
+
+- the __name__ evaluates the module of the code form where it is rans 
+- the __name__ is set to the __main__  if the modele is running directly from the command line 
+
+- this function is used to check wheather the module is runnng directly or it is being imported to the another file 
+
+
+* Global keyword 
+
+- Global keyword  can be use in any function to to change local variable to Global 
+- or it may be used to to define any variable in function 
+
+
+* enumerate 
+
+- we can write (for index , item in enumerate (list))  to print both the item with respective index of it 
+print (item,index)
+
+
+* List comperhension
+
+- easy way to write a new list from old list with modification 
+- new list = [i for i in old_list ]
+- can be used for sets or dictionaries 
+
+
+* Lambda Functions 
+
+- this creates the functions using lambda kryword
+- syntax : lambda arguments : expression 
+
+* Other functions
+
+- .join(list) is used to join any list 
+- .format is used same as f string 
+
+
+* Map ,Filter ,Reduce
+
+** Map
+- it is used for printing any list with modififcation in it 
+- syntax = print(list(map(square,old_list)))   (square all the elemets of the list )
+
+** Filter 
+- it creates a new list an filter the list according to the function 
+- list(filter(function ,list))
+
+** Reduce
+- reduce applies a rolling computation to sequential pair of elements 
+- we have to import it from functools 
+- value = reduce(function ,list)

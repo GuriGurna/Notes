@@ -365,5 +365,189 @@ def search(s, e):
 
 ** Dynamic Programming
 - overlapping sub - problems
-- optimal substructure 
+- optimal substructure  
 
+* Lecture 14 
+
+**
+
+- how long a program take to run not only depend upon the input but also the sizs of the solution 
+
+** big o 
+
+- complexicity of the code 
+- depends uponthe codins of input  
+- pseudu polynomial 
+- polynomical in numeric value of input 
+
+** In dynamic programing
+
+- we trades time for space
+- dont be intimated by exponential problems 
+- dynamic programming is broadly useful 
+- problem reduction 
+
+** Module 
+
+- collection of selected function 
+- refers to functoins using . notation 
+- like input math , input.sqrt(11)
+- import set , import table (table.member(e,t)) 
+
+** Object oriented programming 
+
+- classes 
+- used for data abstraction 
+- abstraction data types 
+- object = collection of data and function 
+- use defined types 
+
+*** message passign metaphor
+
+- one obejct cam passs message to another object 
+-l.sort()  , c.area()  (pass message caslled area to c )
+
+** class 
+
+- class is the collection of objects with characteristics in comman 
+
+
+* Lecture 15 
+
+** Class 
+- template to create instances of an object 
+- each instances have some attributes 
+
+** Class template 
+- __init__  it creates an instances
+- it uses self to refer to that instance 
+- methods - can acess values of the specific instance 
+- data hiding - one can only acess instance values through defined method 
+- in methods it include instance and fields 
+
+** Methods for classses 
+- __init__  = create instance  
+- __str__  =  peinted represention convert into strign 
+- __cmp__ = comparisons 
+- __eq__ = comparing things are things same or not 
+
+
+** Operator overloading 
+- operator overloading is using the same operatore like + , - for different operations 
+- + can be used to add two strings , two numbers 
+
+* Lecture 16 
+
+** Superclass 
+- any sub class can inherit method from the parent class 
+- showding also called overriddding  
+
+** child class 
+- also know as sub class 
+
+** INheritence 
+- in inhertience a class is called superclass 
+- and anpther class called sub class 
+- the sub class inherites from the super clss wihc adds attributres to superclass 
+- we sent the paremeter of sub class to parent class 
+
+
+** Super() Function 
+- super function is used for inheritin g from parent class 
+
+** Overridding parent methods 
+- wehn we dont want to to use all the metods or behaviouss use overriddign 
+
+
+** Multiple inheritence 
+- when a class inherit attributes or methods from more then one parent class 
+
+
+* Lecture 17  
+
+** Dealing with and exploiting randomness 
+- making sence of data 
+- evaluating quality of answers 
+
+** Example 
+- Start simple 
+- cartesian coordination 
+- simulate 
+- random walk  
+
+** Program 
+- location 
+- compasss point 
+- field 
+- drunk
+
+* Lecture 18 
+
+- Inner loop that stimulates one trial 
+- emclose inner loop in a loop that conducts appropriate of trials 
+- calculate and present statiatics
+
+- Always label all the axes and also look while doing 
+- ask if the answer makes any sense 
+- consistant with other evidence 
+- systematic about debuggginh 
+- debugg with simple steps insted of mutiple lines 
+
+** Some examples using random walk
+- Brownian motion 
+- stock market 
+- movement of macromolecules
+- kinetics 
+- model evolution 
+ 
+** Pylab 
+- it gives operation of numbers 
+
+** Array 
+- in numpy array is matrix 
+- it is a type which turns list to array 
+
+* Lecture 19 
+
+** Baised random walks 
+** polymorphysim 
+- the code which will work with different types of objects 
+
+** Distribution 
+- tell where diffeetn people ended up where 
+
+** manhattan project 
+- first large scale computer deployement 
+- project of nuclear detonation 
+-did it using monte carlo simulation 
+- use simulation when cannot get enalatically solution 
+
+
+** Generate a sample of representation scenarioes 
+- simulation as an experiment device 
+- runs everytimes as an experiment device
+- simulations are descriptive not precrisctie 
+- that they describe and give consequences 
+- used to guess and check various possibilities 
+
+
+* Lecture 20 
+
+** Simulation 
+- Stochastic or deterministic simulation 
+- static vs dynamic (time)
+- discrete vs continues  
+
+** Inferential statistic 
+- random sample tends to exhibit same properties is the population from which it is drawn 
+
+
+** Example 
+- pi r square = area 
+- pi d = circumference 
+- 1650 bc = 3.16
+- 223/71 < pi < 22/7
+
+
+** Bufffon laphace 
+- in shade/in square = shahed area / square area 
