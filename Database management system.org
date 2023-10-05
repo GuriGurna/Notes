@@ -1,0 +1,300 @@
+* Introduction
+
+** Data 
+- data is a collection of raw or unorganised fact or details like text symbols figures etc 
+- measured in bytes and bits 
+- have meaning after processed 
+
+** information
+- processed and organised structured data 
+ 
+** Database 
+- is an electronic place or sysytem where data is stored manages and updated 
+
+** DBMS 
+- database = stores the data 
+- set of programs = help in acess ,add ,update ,delete 
+
+** why not file system 
+- data redundancy 
+- difficulity in acessing 
+- integrity problem 
+- security reasons  
+
+* Abstraction
+
+** Three schema architecture
+- overall design of the database is call db schema 
+
+*** Physical or internal level 
+- internal schema
+- lowest level shows how data is stored 
+- define algorithms allows efficient acesss to data 
+
+*** Logical or conceptual level
+- conceptual schema  
+- design of database 
+- what data is stored and relationship between the data
+
+*** View level or extrenal level 
+- external schema 
+- have sub schemas 
+- provides different information view to the different end users 
+- provides a security mechnism from acessing certain parts of database to certain users 
+
+** Instance of database 
+- the data stored in the datbase at a particular instance of time 
+
+** Db schema 
+- attributes of table 
+- consistency constaints 
+
+** Data models 
+- provides a way to describe design at logical level 
+- examples -- ER model , RElationship model , object -oriented model etc 
+
+** Database languages 
+- DDL -- data definition language  - specify dtatbase schema 
+- DML -- data manipulation language - express dtatabse queries and updates 
+- both features can be present in singgle language for example SQl langugae 
+ 
+
+** Database Administrator or DBA 
+- person who has central control of both the dtata and the programs that acess those data 
+
+*** Fuction of DBA 
+- Schema definiton 
+- storage structure and acess methods 
+- authorization control 
+- routine maintainanace 
+- security patches , backups , urgrades 
+
+** DBMS application architecture 
+- client machine 
+- server machine 
+
+*** T1 architecture 
+- client . server , and dbms on same system 
+
+*** T2 archi 
+- client and apllication send direct queries to the database 
+
+*** T3 archi 
+- client  server network with applicaion 
+- application then network with the database system 
+- data intgrirty - app server minimises datat corruption 
+- scalibility - distributed servers 
+- security - client cannot acess direct dattabse 
+
+* ER Model 
+- entity relationship  model
+- contains objects called as entitie and attributes  and their relationship 
+- unique attribute -- primary key 
+
+** Entity  
+- same objects that share same attributes 
+
+** Attributes 
+- to define entity 
+- domain , values , permitted , non permitted 
+
+*** Simple 
+- cannot be divided further 
+
+*** Composite 
+- can be divided into subparts 
+- if want to refer to only coponent of attribitute 
+
+*** Single valued 
+- only one vale attribute 
+
+*** Multi valued
+- atttribute having multiple values 
+
+*** Derived 
+- can be derived from another attribute 
+
+*** Null value 
+- does not have value of it 
+- 
+** Relationship
+- link between two or more entities 
+
+*** Strong relationship
+- have primary key 
+
+*** Weak relationship
+- does not have primary key 
+
+** Degree of relationship 
+
+*** unirary relationship 
+- only one entity 
+
+*** binary relationship 
+- two attribute relationship
+
+*** tertiry relationship
+- theree attribute relationship
+
+** Relationship constraints 
+
+*** Mapping cardinality  
+- number of entities to which another entity is assosiated by relationship 
+
+**** One to one 
+- in two entity sets one entity only associates with another one 
+
+**** One to many 
+- one entity associated with many entitites in another set  
+
+**** Many to one  
+- many entities are associated with single entity 
+
+**** Many to Many 
+- multiple entities associated with multiple entities in two diffrent sets of entities 
+
+*** Participation constraints
+- Partial participation -- not all entities are involved in relationship instance  
+- Total participation -- each entity must be involved in one relationsip instance 
+- weak entity has total participation constraint 
+- strong may not have 
+
+** Extended ER Features 
+*** Specilisation 
+- (is a ) is used for inheritence  
+- it is used to split up entity into futher sub entity sets basis of features or functionalities 
+- certion attributes may not be applicable to parent entity set 
+
+*** Generalization 
+- reverse of specilisation 
+- when certian properties of two entities are overlapping we ca make new entity set as a super class 
+- bottom up approach 
+- simpler , attributes not get repeated 
+
+*** Participation Inheritence 
+- if parent entity set participate in relationship then chilt entity will also participate in relationship 
+
+*** Aggregation 
+- to show relationship among relationship 
+- abstraction is applied and avoid redundancy by making relationship as an entity itself 
+
+
+* Steps to make Er diagram 
+- identify entity sets 
+- identify attributes and thier types 
+- relationship and constraints = mapping and participation 
+
+** ER model of banking system 
+- banking system  - branches (name) 
+- bank - coustomers 
+- customers - accounts and loans 
+- customer associated with some banker 
+- bank have employes 
+- accounts - saving or current
+- loan and payemt schedules 
+
+** Entity sets 
+- branch 
+- customer 
+- employee 
+- saving account 
+- current account 
+- loan 
+- payemt of loan 
+
+** Attributes and types 
+- branch -- name , city , assets , liabilities 
+- customer -- name , adress , contact no , dob  ,age , cus-id 
+- employee -- name , employee-id , cont no , dependent name , year of service , start date 
+- saving account - acc on , balance , interest rate , daily withdrawl limit 
+- current acc - acc-no , balance , pertranscation charges , overdraft - account 
+- loan - loan no , amount 
+- payment - payemt no , date , amount 
+
+** Relationship and constaints
+- customer borrow loans (total participation of loan )
+- loan orriginated by branch 
+- loan and payment 9(total pati of loan)
+- customer deposit account 
+- customer and employee 
+- employee menage by employee 
+
+* Relational model 
+- organises the data in the form of tables 
+- each table is  assigned with unique name 
+- a single row is tuple represent single record 
+- colums represnts attributes 
+- relation schema - defines the design and strucutre of relation 
+
+** Degree of table 
+- no of attributes or colums 
+
+** Cardinality 
+- no of tuples 
+
+** Retaional key 
+- uniquesly represnt each tuple 
+
+** RElational model keys 
+*** Super key 
+- any p and c of attributes in table which uniquely identify each tuple 
+
+*** Candidate key 
+- minimum subset of super keys to unikely identify tuple 
+
+*** Primary key 
+- key from candidate key with least attributes 
+
+*** Alternate 
+- all keys in candidate key other than primary key 
+
+*** Foreign key 
+-  creates relation between two tables 
+- a primary key of parent table that is used as an attribute in child table is caalled foreign key 
+
+*** Composite key 
+- primary key fored by two attributes 
+
+*** Surrogate key 
+- generated automatically by DB 
+- used as primary key 
+
+** Integrity constraints 
+- Crud should be done with integrity so that Db should be consistent
+
+*** Domain constraints 
+- restricts that data types of every attribute 
+
+*** Entity Constraints 
+- every tale should have primary key 
+
+*** Insert constraint 
+- value cannot be inserted in child class if it is not laying the parent table 
+
+*** Delete Constraint 
+- value in parent table caannot be deleted if lying the child table 
+- if wanted to delete it on delete cascade is used 
+- or we can make the corrosponidng value null in child table 
+
+** Key Constriants 
+*** Not null
+- ensure that if applied attribute should not be null 
+
+*** UNique Constraint 
+- ensure that all the values in attribute are unique 
+
+*** DEfault constraint
+- it is used to add default value to the columnn is no value specify them 
+
+*** Check 
+- limit value range (Domain)
+
+*** Primary key 
+- not nulll 
+- uniquely identify each tuple 
+
+*** Foreign key constraint 
+- keep relation between two tables 
+- primay in parent table 
+- foreign in child table 
