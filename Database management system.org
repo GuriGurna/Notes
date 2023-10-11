@@ -298,3 +298,185 @@
 - keep relation between two tables 
 - primay in parent table 
 - foreign in child table 
+
+* Trasformation of er model to relational model 
+
+** er diagram notations to relations 
+*** Strong entity 
+- entity primary key used as relation pk 
+- fk are added to establish relationship with other relations 
+
+*** Weak entity 
+- pk of its correspoiding strong entity wiill be addes as pk 
+- pk of the relation wiil be composite pk 
+
+*** Single values attributes 
+- represented as colums in tables 
+
+*** Composite attributes 
+- handled by creating a special attribute itself in the original relation for composite relation 
+
+*** Multivalued attributes 
+- new tables are created for multivalued attribute 
+- pk of the entity is used as column fk in new table 
+
+*** Derived attributes 
+- not used in the tables 
+
+*** Generalisation 
+**** Method 1 
+- crerate a table for higher lvl entity 
+- for lower lvl entity set create tables for all attributes and with pk of higher vvl entity 
+
+**** Method 2 
+- erate tables of all lower lvl entity sets not for higher lvl 
+- invldue all atrributs of lower entity as well as of higher lvl entity set 
+- redundancy 
+
+
+* Normalization 
+- to avoid redundancy in db and not to store redundAant data 
+- otherwise insertion , deletion , updation anomalies arises 
+- consistency is maintained , organised data 
+
+** Functional dependency 
+- it is the relationship between primary key attribute to other attributes 
+- primary key is known as determinant and other is called as  dependent 
+
+*** Types of FD 
+**** Trivial FD 
+-  a and b have trivial fd if b is subset of a 
+
+**** Non - Trivial FD 
+- a and b have non trivial dependency if b is not a subset of a 
+
+*** Rules of FD 
+**** Reflexive 
+- if a is set and attributes and bet is subset of it then b dependends on  A
+
+**** Augmentation 
+- id b can be determined from a then adding an attribute dont change aything  
+
+**** Transitivity 
+- if A determines b and b dtermines c then a determines c 
+
+** Anomilies 
+
+*** Insertion anomaly 
+- wehn certion datat cannot be insertion without persence of other data 
+
+*** Deletion anomaly 
+- wehn deletion of data results in unintended loss of other important data 
+
+*** Updation Anomaly 
+- when upadate of single data value requires other data to be updated 
+
+** What to do in normilation 
+- decompose table into multiple tables 
+- until single respomsibilty principle is achieved  
+
+** Tupes of normal forms 
+*** 1NF
+- every relation cell must have atomic value 
+- relation must not have multivalued attributes 
+
+*** 2NF 
+- no partial dependency 
+- all non prime attributes must be fully depennedt on pk 
+- non prime attribute can not be depend on the part of the pk 
+
+*** 3NF
+- no transitivity exists 
+- non prime attribute should not find a non prime attribute 
+
+*** BCNF (Boyce codd normal form )
+- non prime should not be determne prime attribute 
+
+* Trsnsaction 
+- a unit of work done against db in logical sequence 
+- it is logical unit of work that contain one or more sql statements 
+- statements either gets compltesed or if any failure happens it gets rolled back 
+
+** Acid properties 
+-  for integrity of data 
+
+*** Atomicity 
+- either all the operations of transaction are reflect or none are 
+
+*** Consistency 
+- db must be conssitent after transaction happens 
+- integrity constraints must be maintained before and after transaction 
+
+*** Isolation 
+- multiple transaction can happen in the system in isolation without interfering each other 
+- multiple transaction should occur sequentely in the system 
+
+*** Durability 
+- after transaction completes the changes has made to the database persist even if there is system failure 
+
+
+** States of transaction 
+***  active state 
+- read or write operation occures 
+- comes to partially commited state 
+- if any failure occures it leades to the failed state 
+
+*** Partial commited state 
+-  after transaction is executed changes will we saved in buuder in main memory 
+- if changes are permaned it will tranfer to commited ststae 
+- if any failure it will go to the failed state 
+
+*** Commited state 
+- wehn updates are made permanred it is commited state 
+- cannot rollback from commited state 
+
+*** Failed state 
+- when any failure occures in transaction which makes impossible to continue the execution o fthe transaction 
+
+*** Aborted  state 
+- when reach at failure state all changes made in buufer are reversed and reches aborted sate 
+
+*** Terminated state 
+- a transaction if it is either commited or oborted 
+
+
+* HOw to implement atomiticity and durability 
+** Shadow copy scheme 
+- based on making copies pf db 
+- only one transcation at a time 
+- dp pointer on disk point curent copy of db 
+- all updates are done on new copy , old copy remain untouches 
+- if transcation is to be aborted system deletes the new copy 
+- if T suceees 
+- os makes sure all pages of new copy written on disk 
+- db system updates the db pointer to point thenew copy of db 
+- old copy will be delelted , new copy will be curretn copy 
+- t have been comitted at the point db pointer written on disk 
+
+*** Durability 
+- if system fails before th eupdated db pointer is written on the disk 
+- when system restarts it will read db pointer will see original content of db 
+- no effects of t wiill be visible 
+- if db pointer gets updated then sytem fails then system will read new copy of db 
+- disk system provide atomic updates to entire block or at least one disck sector se we make db pointer lie in single sector by placing it begning of block 
+- inefficient -- due to copy large files 
+
+** LOg Based recovery 
+-  log is a sequence of records 
+- stored in stable storage so if failure occurs it can be recovered 
+- any operation is perforemd it will be stored in the log 
+ 
+*** Deffered db modification 
+- ensuring atomicity by recording all db modifications in log but deffering the execution of operations until final executoion of action 
+- log info is used to take action 
+- if system crased before t completed , log got ignored 
+- if t completed=s log executed 
+- if failure accour while updating we perform redo 
+
+*** Immediate Db modification 
+- db modification take place wile t is still in active state  
+- db modificqations written by active t are uncomitted modification 
+- in failure , old logs are used for restoring 
+- upades after logs stored in stable storage 
+- in failure before t completes , it got aboreted and undo t 
+- if t completed and stystem crashes , new value used to redo 
