@@ -480,3 +480,106 @@
 - upades after logs stored in stable storage 
 - in failure before t completes , it got aboreted and undo t 
 - if t completed and stystem crashes , new value used to redo 
+
+* Idexing 
+- it is used to optimise the performance of dattabse by minimising the number of disk acesses required wehn query is processed 
+- it is used to locate and acess the data
+- search is primary key or candidate key of table 
+- data refernce - pointer hold the disck block where value is stored 
+- it is optioanl but increae speed 
+- index file always sorted 
+
+** Indexing methods 
+*** Primary index (clustering index)
+- a primary index is an index whose search key also defines the sequential oreder of file 
+- based on key atribute - no of enteries = no of blocks 
+- based on non key attribute - no of enteries = no of unique keys 
+- multilvl indexing - indexing with multiple lvl 
+**** Dense index 
+- when every search key is present in index file it is called dense index  
+
+**** Sparse Index 
+- an index apper only for some of the search key values 
+
+*** Secondary indexing 
+- used in unsorted keys 
+- dense indenxign 
+
+* NOSQL
+
+- not only sql 
+- provide flexible schemas and large amount of data and high user laods 
+- schema free 
+- data structure used are not tabular 
+- can handle large amount of data 
+- store data in a format other than relational 
+
+** Data advantages nosql 
+*** Flexible schema 
+- nosql has flexible schema 
+- do not have pre defined dchema 
+
+*** Horizonatal scaling 
+- horizontal scaling known as scale out 
+- colections are self contained and not coupled relationally 
+- do not have join themselves across nodes
+
+*** High Availability 
+- nosql databases are highly available and faster due to its auto replication feacture 
+- stored at multiple servers 
+
+*** Esay insert and read operations 
+-  the data whic hwe want to access together will be stored together 
+- they do not require join so queries are very fast 
+
+*** Caching Mechanism 
+*** no sql use in more cloud appliations 
+
+** When to use nosql 
+- fast paceed development 
+- storage of structured and semi structurwed data 
+- huge volume of data 
+- modern applicatipn like micro services 
+
+** nosql db misconceptiona 
+- relationship data can also stored in nosql 
+- nosql databases can support acid transactions 
+
+
+** Types of nosql 
+*** Key value 
+- these associates a value  from simple string to complex object with key which is used to kepp track of object 
+- these are compact and efficient index strucutes 
+- ideal for sytems that need to be able to find and retrieve data in constant time 
+
+
+*** Column oriented 
+- the data is stored such that each row of a column will be  next to other rows from that same columns 
+- stores data in row and read row by row 
+- columnar databases can quickly aggregrate the vaue of a given column 
+
+
+*** Document based stores  
+- each document contains pairs of fields and values
+- values can typically be variety of types including things like strigns , numbers , booleans , arrays or objects 
+- support acid  properties , suitable for transactions
+used cases unclude trading platforms and mobile app development etc  
+eg - mongodb , couchdb
+
+*** Graph based stores 
+- each data element is stored as a node 
+- the connectinos between elements are called links or re;ationship 
+- a graph database is optimised to capture and search relation between data elements 
+- these usually run alongside with other type of dtatbases 
+- uses casesare fraud detection , social network and knowledge graphs 
+
+
+** Nosql databases disadvantages 
+- Data redundancy 
+- databases are larger than sql databases 
+- update and deletion are costly 
+- all types of data model doesnot fulfill your application needs 
+- do not support acid properties in general
+- do not support data entry with consistency constraints 
+
+

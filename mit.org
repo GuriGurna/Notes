@@ -551,3 +551,155 @@ def search(s, e):
 
 ** Bufffon laphace 
 - in shade/in square = shahed area / square area 
+
+* Lecture 21 
+
+* Sample 
+- how many samples 
+- how much accurate 
+
+- if answer is valid it does not mean it is corret 
+- check resut agaist physical reality 
+
+** Spring constat
+- also called as stiffness 
+- how much enery it takes to compress the spring \
+- houtrk law = forse = -kx 
+- by putting differetn weight on the spring we can calculte the spring constant 
+
+** Objective Function 
+- least squales fit 
+- summation(obsecuation - prediction )
+- pylab has a buitin function calles polyfir 
+- a polynomial with degree one in this case set of points(distance ,  forces , i)
+- linear regression 
+- R**2 - cofficient of determination
+- R**2 = 1- ee/data variance 
+- does closer != better 
+
+
+* Lecture 22 
+
+** Normal distribution 
+- also called natural , bell curve , gaussian 
+- described into to paerts 
+- mean and standard deviation 
+- not matter how many time we perform the task 
+- shape will always be same 
+- standard devistion is staticial dispersion 
+
+** Rollign dice 
+- if we get 7 ,11 we win 
+- if get 2, 3, 12, lose 
+- otherwise number become point 
+- uniform distributon - each vaylue have equally likey changce to occur 
+- eg - birtday distribution 
+- exponential are perdictablebecause answer lie loe to the mean 
+
+
+** Misuse of data 
+- beware of people who give properties of data but not thedata 
+- correlation does not imply causation 
+- lurking variables - noes not look at cause an effect relation 
+- non- response fact
+- non representiive samples 
+- data enhancement - data give with comaparative data is useless 
+
+
+* Lecture 23
+
+** Data enhancement 
+- Index portfolio 
+- managesd portfolio 
+- efficient market hypotheisi 
+- markets are informationally efficient 
+- which means maekt is memory less 
+
+
+** Stock and market 
+- adjusted for risk 
+- every stock behave differently 
+- how to model this distribution 
+- with the help of different propertion of distribution we can model it 
+- we use multiplicative method insted fo additive 
+
+
+* Lecture 24 
+
+** Computational thinking - the process 
+- invent usefull abstration 
+- formulate the errors  
+- implementation fo the experiment 
+- run experiment 
+- evalute results of the experimatn 
+- repeat as needed 
+
+** Two A's of the computationa; thinking 
+
+*** Abstraction 
+- choosing right abstraction 
+- operating in terms of multiple layers of abstraction 
+- defining relationship between layers 
+
+*** Automation 
+- thinkk in terms ofo mechanizing our abstraction 
+- mechanization is possible 
+- we have exating notation and models 
+- there is some machine 
+
+** Example sof computational thinking 
+- how difficult is the problem and how best can i solve 
+- theoritical computer sicsence gives meaning to these aswers 
+- thinking recursively 
+- reduction , embedding , transformation , simulation 
+
+** What one group does 
+
+- help people quality lives 
+- techinical area 
+- algorith desgn 
+- signal processign 
+- software systems 
+
+** Specific research activities 
+- cilnically usefull information from electric signals 
+- heart , brain, connected anotomy ]
+- signal processign , algoritms , clustering , machine learnibng
+- predictign adverse cardiac events 
+- detectign and responding to epileptic seizuers 
+
+
+** Example perdecting death 
+- acs syndrome - 15 prcetn people suufer cardiac related death 
+- who should be treated with statins 
+- it can be done with morphological variability 
+
+*** Useful to find ptients 
+- who should be monitored more closely 
+- treated more aggressively 
+eg implanted difibrillatators 
+
+
+** why python
+- easy to learn 
+- simple syntax 
+- easier debugging 
+- modern language 
+- objectoreinted programmign 
+- popular 
+- use in industry 
+- large set of labraries 
+
+** Debugging problems 
+- understant problem 
+- break into sm-all parts 
+- identify usefull abstraction 
+- code and unit test 
+- start with pseudo code 
+- be symmetric 
+
+** Algorithms 
+- big o notation 
+- kinds of algorithms 
+- specific algorithms 
+- optimixatino problems 

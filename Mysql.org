@@ -1,0 +1,279 @@
+* Types of Dataype 
+** String
+- char(0 to 255) 
+- varchar, binary , varbinary
+- text(bytes)
+- mediumtext , longtext 
+- enum (65535 values)
+- set (64 values)
+
+**  Numeric
+- bit , int , boolean , float , decimal 
+
+** Date and time 
+- date -- year-month-day 
+- date time --- year-month-day hour:minute:second 
+- year -- four digit format 
+- time -- hour-min-second 
+
+* Syntax
+
+** creating a table
+
+- CREATE TABLE table_name 
+  (
+    column1 datatype, 
+    column2 datatype, 
+    column3 datatype, 
+  );
+
+
+** insert 
+
+- INSERT INTO table_name 
+  (column1, column2, column3)
+  VALUES 
+  (value1, value2, value3);
+
+
+*** for multiple rows 
+- INSERT INTO table_name
+  (column1, column2, column3)
+  VALUES
+  (value1, value2, value3 ),
+  (value1, value2, value3 ),
+  (value1, value2, value3 );
+
+- if inserting no of values equal to no of columns no nedd to mention columns 
+
+
+** Select 
+
+*** for reading the data select query is used 
+- for only rrading selected columns 
+- SELECT column1, column2...
+  from table_name;
+  
+-  for reading all the columns 
+- SELECT * FROM table_name
+
+- if want to change column name for reading 
+- SELECT column1 as "new name " FROM table_name
+
+*** WHERE clause
+- used to filter the data 
+- = equals 
+- != not equal 
+- >= greather than or equal to 
+- <= less than or equal to 
+- > greater thsn
+- < less than 
+
+- SELECT column1, column2
+  FROM table_name
+  WHERE condition 
+
+
+* MY SQL constraints 
+- not null 
+- unique 
+- default 
+- check 
+- foreign key and primary key 
+
+
+* OPerators 
+** And 
+- if both epression are ture retun ture 
+  SELECT * FROM table_name
+  WHERE condition AND condition 
+
+
+**  Or 
+- is either true retun true 
+- SELECT * FROM table_name
+  WHERE condition or  condition
+
+
+** Not 
+- reverse the input 
+- SELECT * FROM table_name
+  WHERE NOT condition
+
+
+** IN 
+- used as replacement for or condition 
+- SELECT * FROM table_name
+  WHERE condition IN()
+
+
+** Like 
+- used in where condition for specific pattern 
+- % for multiple char
+- _ for singhle char 
+- SELECT * FROM table_name
+  where column LIKE condition& 
+
+- a% starts witgh a 
+- %a ends with a 
+- %o% have o in any positon 
+- _r% r in second position 
+- a_% starts with a and 2 length 
+- a%o starts with a adn ends with o 
+
+
+** Between and NOT between 
+- to sort data between some values  
+- SELECT * FROM table_name
+  WHERE condition BETWEEN val1 AND val2 
+
+
+** ORDER by 
+- SELECT * FROM table_name ORDER BY 
+  col1 ASC | DESC 
+
+
+** DISTINCT 
+- used to distinct values 
+- SELECT DISTINCT column FROM table_name ORDER BY ASC 
+
+** LIMIT
+- when we want to read only particular number of values 
+- SELECT * FROM table_name LIMIT value  
+
+** OFFSET 
+- it will miss starting values 
+- SELECT * FROM table_name OFFSET value 
+
+* AGGREGATE functions  
+
+** count
+- give number of rows 
+- SELECT count(column1) FROM table_name; 
+
+** sum 
+- returns total sum of numeric column 
+- SELECT sum(column) FROM table_name;
+
+** avg 
+- calculates average of a set of values 
+- SELECT avg(column) FROM table_name;
+
+** min 
+- return lowest values 
+- SELECT min(column) FROM table_name;
+
+** max 
+- return largest value
+- SELECT max(column) FROM table_name;
+
+* Update query 
+- used to update any specific value in the database 
+- UPDATE table_name
+  SET field1 = newvalue1 
+  field2 = newvalue2 [where]
+
+
+* Delete  Query 
+- used to delete values form the tabel 
+- deleted primary key cannot be assigned to another set of values 
+- DELETE FROM table_name {wheRe clause};
+
+
+* Commit and rollback 
+- if we commit the transaction we cannot rollback and viceversa 
+- COMMIT; once we commit the chage it will not change 
+- ROLLBACK; used to undo the change 
+
+
+* Auto_increment 
+- used for automatically incremeting the value like increasing 1234
+
+
+* Primary key 
+- unique data 
+- not null 
+- CREATE TABLE table_name
+  (
+    id int NOT NULL, 
+    PRIMARY KEY (id),
+  )
+
+
+* Foreign key 
+- to link two tables 
+- CREATE TABLE table_name
+  (
+    id int NOT NULL, 
+    name VARCHAR(100) NOT NULL,
+    city_id  INT 
+    PRIMARY KEY (id),
+    FOREIGN KEY (city_id) REFERENCES other_table_name (column) 
+  )
+ 
+
+* Mysql Inner Joins
+- used to show the similar data between two tables 
+- can also use join instead of inner join 
+- SELECT columns 
+  FROM table_name1
+  INNER JOIN table_name2 ON condition 
+
+
+** Left join 
+- will return all data from the left table but only commmon data from right table 
+- SELECT column
+  FROM table_name1
+  LEFT JOIN table_name2
+  ON table_name1.column = table_name2.column 
+
+
+** Right join 
+- will return all data from the right table but only commmon data from left table 
+- SELECT column
+  FROM table_name1
+  RIGHT JOIN table_name2
+  ON table_name1.column = table_name2.column 
+
+
+** Cross join 
+- SELECT * FROM table_name1
+  CROSS JOIN table_name2
+  
+** Mltiple table join 
+- SELECT column FROM table_name1
+  INNER JOIN table_name2
+  ON table_name1.column = table_name2.column
+  INNER JOIN table_name3
+  ON table_name1.column = table_name3.column
+
+
+* Group by and having clause 
+
+** Group by 
+- SELECT column 
+  from table_name
+  WHERE condition(not mandatory )
+  GROUP BY column
+
+
+** HAving 
+- - SELECT column 
+  from table_name
+  WHERE condition(not mandatory)
+  GROUP BY column
+  having conditino 
+
+
+* Sub query 
+- SELECT column FROM table_name
+  WHERE condition 
+  (SELECT column FROM table_name2);  
+
+
+** Exists 
+- if data exists it will show the datat otherwise not 
+- - SELECT column FROM table_name
+  WHERE EXISTS 
+  (SELECT column FROM table_name2);  
+ 
