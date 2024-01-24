@@ -1,3 +1,23 @@
+* DDL
+- data defination language 
+- create , drop ,alter ,truncate 
+
+* DML 
+- data manipulate language 
+- insert ,update ,delete 
+
+* DCL 
+- data control language 
+- grant , revoke 
+
+* TCL 
+- transaction control language 
+- commit ,rollback 
+
+* DQL 
+- data query language 
+- slelct 
+
 * Types of Dataype 
 ** String
 - char(0 to 255) 

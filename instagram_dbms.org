@@ -1,0 +1,66 @@
+* users 
+- id 
+- first name 
+- last name 
+- date of birth 
+- email id 
+- passwords 
+- phone number 
+- profileImage
+- updatedAt (timestamp)
+- createdAt
+
+* post 
+- id
+- id (user)
+- caption 
+
+* image 
+- image id 
+- post id 
+- image url
+
+* comment 
+- id 
+- user id 
+- text 
+
+* comment reply
+- id 
+- comment id 
+- text 
+
+
+* like 
+- id 
+- id(user)
+- id(post)
+
+* followers
+- id(followers) 
+- id(user)
+- id(following)
+
+* message 
+- id
+- sender id 
+- sent time (timestamp)
+- receiver id 
+- seen (boolean)
+- text
+- image url
+- video url 
+- post id 
+
+* story 
+- id 
+- user id 
+- image or video url
+- upload time (timestamp)
+
+* story view 
+- view id 
+- story id 
+- id(seen by users)
+- seen time(timestamp)
+

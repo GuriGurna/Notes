@@ -1,0 +1,32 @@
+* user table 
+- userid int primary key ,
+- first name varchar(50) not null,
+- last name varchar(50) not null ,
+- phone number varchar(12) unique ,
+- date of birth date 
+- password varchar(50) not null unique
+
+* comment table 
+- commentid int primary key ,
+- userid 
+- postid 
+- foreign key userid references user(userid)
+- foreign key postid references user(postid)
+
+* post table 
+- postid int primary key ,
+- userid 
+- image_url varchar(100) not null ,
+- caption text null 
+- foreign key userid references user(userid)
+
+
+* likestable 
+- likeid int primary key ,
+- userid `
+- postid 
+- foreign key userid references user(userid)
+- foreign key postid references user(postid) 
+
+* followers table
+- userid 

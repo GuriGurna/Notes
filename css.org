@@ -1,0 +1,442 @@
+* Css 
+
+- html is just layout o fa website 
+- we need css to design a website and styles to it and make it look beautiful 
+- css stands for cascading style sheets 
+- css is optional but it convers html into beautigul and responsive website 
+
+- create a .css file inside your directry 
+- body {
+    background-color:red;
+}
+- this will make your page background as red 
+
+
+* Css website 
+
+** Dom 
+- it stands for document object model 
+- when a page is loaded  the browser creates a dom of the page which is constructed as a tree of objects 
+
+** Html id and class attribute 
+- when an html element is given an id , it serves as a unique identifier for that element 
+- when given a class it belongs to that class 
+- more than one element can belong to the same class 
+- we can add multiple classes to an element like this 
+- <div id="first" class="c1 c2 c3" >
+   ...
+   </div>
+
+** Ways to add css to html 
+- <style> tag -- adding <style> ... </style> to html 
+- inline css -- adding css using style attribute 
+- external css - adding stylesheet(.css) to html usign <link> tag 
+
+** Css selectors 
+- a css selector is used to select an html element for styling 
+- body {
+    color :red ;   (propeerty:value )
+    background-color :pink;
+  }
+
+** Element selector   
+- it is used to select an elemetn based off the tagname 
+- for example:
+- h2 {
+    color:blue;
+  }
+
+** Id selector 
+- it is used to select an element with a given id 
+- #first {
+    color : white;
+  }
+
+** Class selector 
+- it is used to select an element with a given class 
+- .red {
+    background-color:red;
+  }
+
+** Important notes 
+- we can group selectors like this :
+- h1,h2,h3,div{
+    color:blue 
+  }
+
+- we can use element.class as a selector like this :
+- p.red{
+    color:red;
+  }  
+
+- *can be used as a universal selector to select all the elemets 
+-  * {
+    margin:0;
+    padding:0;
+  }  
+
+- an inline style will override external and internal styles 
+
+** Comments in css 
+- comments in css is text which is not parse and thus is ignored 
+
+
+* color and background
+
+- css rules are simple key- value pairs
+- with a selector we can write css rules to change color and set background 
+
+** The color property 
+- the color property can be used to set the text color inside an element 
+- p {
+    color: red;
+  }
+
+- similarly we can set color for different elements 
+
+** Types of color values 
+- following are the most commonly used color values in css 
+
+*** Rgb
+- specify color using red, green ,blue values 
+- eg rgb(200,98,70)
+
+*** Hex code 
+- specify color using hex code 
+- eg #ff7180
+
+*** Hsl 
+- specify the color using hsl values 
+- eg hsl(8,90%,63%)
+
+- the value of the color or background clor us provided as any one of these values 
+
+** background-color property 
+- css background-color specifies backgroundcolor of the container 
+- eg .brown {
+    background-color:brown;
+  } 
+
+** background-image prperty 
+- use to set background image 
+- body {
+    background-image :url("guri".jpg")
+  }  
+
+the image in default repeated in x and y directions 
+
+** background repeat propeety 
+- repeat-x -- repeat in horizontal direction 
+- repeat-y -- repeat in vertical direction 
+- no repeat -- image no trepeated 
+
+** Background size property 
+- cover -- fits and no empty space remains 
+- contain -- fits and image is fully visible 
+- auto -- display in original size 
+- width -- set width and heigth will be set automatically 
+
+** Background position property 
+- sets the starting position of the background image 
+- div {
+    background-position:left top ;
+  }
+
+** Background attachment property 
+- deines a scrollball or non scrollbar character of a background image 
+- div {
+    background-attachment:fixed 
+}
+
+** Background- shorthand
+- a single property to set multiple background properties 
+- div {
+    background: red url("img.jpg") no repeat fiexed right top ;
+
+}
+
+* Css box model 
+
+- css box model looks at all the html elemets as boxes 
+
+** Setting width and heigth
+- we can set width and height in css as follows 
+- #box {
+    height:70px;
+    width:70px;
+  }
+- total height or weidth id calculated as follows 
+- total height = height + top/botton padding + top/bottom border + top/bottommargin
+
+** Setting margin and paddign 
+- we can set margin and padding as follows 
+- .box {
+    marign :3px;
+    padding:4px;
+  }
+
+- box {
+    margin: 7px (top) 3px(right) 4px(bottom) 3px(left)
+  }   
+
+- box {
+    marign:4px(top/bottom) 3px(left/right)
+  }  
+
+- we can also set indivifual margin and paddign 
+- margin-top:3px;
+
+** borders 
+- box{
+    border-width : 2px;
+    boder-style :solid;
+    border-color:red;
+}
+*** Border radius 
+- div {
+    border-radius : 3px;
+  }
+
+** Margin collapse 
+- when two margins from different elemests overlap the equivalent margin is the greater of the two 
+- that is smaller margin shares the regin with larger margin 
+
+** Box-sizing 
+- determines what out of the padding and border is included in the element width and height 
+- can be content box -- content only in width and height 
+- can be border-box -- includes padding and border 
+
+* Fonts and display 
+
+** The display property 
+- css display property is used to determine wheater an elemet is treated as a block or inline elemetn and the 
+   layout used for its childern like flex or grid etc  
+
+*** Display-inline 
+- takes only the space required by the element 
+- no linebreaks before and after settign width/height not allowed 
+
+*** Display-block 
+- takes full space available in width and leaves a newline before and after the element
+
+*** Display-inline-block 
+- similar to inline but settign height width margin and paddign is allowed 
+- elements can sit next to each other 
+
+** Display : none vs visibility : hidden 
+- with display none the element is removed from the document flow 
+- its space is not blocked 
+- with visibility hidden the element is hidden but its space is reserved 
+
+** text align property 
+- used to set the horizontal alignment of a text 
+- text-align:center;
+
+** Text-transform property 
+- used to specify uppercase and lowercase letters in a text 
+- text-transform:uppercase;
+
+** Line-height property
+- use to specift the space between two lines 
+- small{
+    line-height:0.7;
+   }
+
+** Font 
+- font plays a very important role in the look and feel of the website 
+
+*** Font family 
+- font family specifies the font of a text 
+- can hold multiple values as a "fallback " sysytem 
+- font-family: "guri" ,monospace;
+
+** Web safe fonts 
+- these fonts are universally installed across the browsers 
+
+** How to add google fonts 
+- in order to use custom google fonts , go to google fonts then select a style and paste it to the styple.css of 
+ page 
+
+** Fonts properties 
+- font-size -- size of the Font
+- font-style -- sets the font style
+- font-varient -- set wheather th etext is displayed in small caps 
+- font-weight -- sets the weight of the font 
+
+** Generic families 
+- broad class of similar fonts 
+- font.family -- specific 
+- font.generic -- generic 
+
+* Size , position and lists 
+- there are more units for describing size other than px 
+- there are rem ,em ,vw ,vh ,percentage etc 
+- pixels are relative to the viewing device 
+- for a device with size 1920x1080 1 px is 1 unit 
+
+** Relative lengths 
+- these units are relative to the other lenght property 
+- em -- unit relative to the parent font size 
+- rem -- relative to the root font size 
+- vw -- relative to 1% viewport width 
+- vh -- relative to 1% viewport height 
+- % -- unit relative to the parent element 
+
+
+** Min/max -height/width prperty 
+- if the content is smaller than the minimum height , minimum height will be applied 
+- similer with the other properties 
+
+** Position property 
+- used to manuplate the location of an element 
+- static -- the default position ,top/botton,left has no effect 
+- relative -- top/bottom/right/left/z-index will work 
+- absolute -- the element is removed from the flow and is relatively positioned to its first non static ancestor 
+- fixed -- positioned relative to browser window 
+- sticky -- element is positioned based on user's scroll position 
+
+
+** List-style property 
+- the list style is a shorthand for type , position and image 
+- list-style : square  inside url("guri") 
+
+** Z-index property 
+- the z-index property specifies the stack order of an elemt 
+- defines which layer will be above in case of overlapping elements
+
+
+* Flexbox 
+
+** Float property 
+- it flows the element towards left/right 
+
+** clear property 
+- used to clear the float 
+- specifes what elements can float beside a given element 
+
+** Css flexbox 
+- provide a better layout ,align and distribute space among items in a container 
+- display: flex 
+
+** Flex direction property 
+- define the directino towards which items are laid 
+- can be row , row reverse , column , column reverse 
+
+** Flex properties for parent
+- flex-wrap : can be wrap , nowrap ,wrap-reverse 
+- justify-content : align along main axis 
+- align-items : defines alignment along cross axis 
+- aling-content: align flex container lines when there is extra space in the cross axis 
+
+** Flex properties for children 
+- order : controls the order in which the items apper in flex container 
+- align-self : allows default alignment to be overridden for the individual flex items 
+- flex-grow : define ablity for a flex item to grow 
+- flex-shrink : specifies how much a flex item will shrink relative to other items 
+
+* Css grid and media queries 
+
+- css grid can be initilized usign 
+- display:grid;
+
+** Grid-column-gap property 
+- used to adjust the space between the columns of the css grid 
+
+** Grid-row-gap property 
+- used to adjust the space between the rows of css grid 
+
+** Grid properties 
+- the grid-template-columns property can be used to specify the width of columns 
+- display:grid ;
+- grid-template-columm :123px auto;
+- grid-template-rows property can be used to specify the heigth of each row 
+- grid-template-row: 234px 23px
+- justify-content is used to align the whole grid inside the container 
+- align-content property is used to vertically align the whole gried inside the container 
+
+** Grid item properties 
+- grid-column property is used to define how many columns an item will span 
+- grid-column:1/5;
+- grid-row property defines how many rows an item will span 
+- we can make an item to start an column 1 and span 3 columns like this 
+
+** Css media queries 
+- used to  apply css only when a certain condition is true 
+- syntax: 
+      @media only screen and (max-width:234px){
+        body{
+          background-color:red;
+        }
+      }
+
+* Transforms , transitions and animations 
+- transforms are used to rotate , move , skew or scale elememts 
+- used for creating 3d effect 
+
+** Transform property   
+- used to apply a 2d or 3d transformation to an element 
+
+** Transform origin property 
+- allows to change the position of transformed elements 
+- 2d transforms -- can change  x and y axis 
+- 3d transforms -- can change z axis as well 
+
+** Css 2d transform methods 
+- you can use the following 2d transforms in css 
+- translate()
+- rotate()
+- scalex()
+- scaley()
+- skew()
+- matrix()
+- scale()
+
+** Css 3d transform methods 
+- rotatex()
+- rotatey()
+- rotatez()
+
+** Css transitions 
+- used to change property values smoothly over a given duration 
+
+** Transition property 
+- transition-property -- property you want  to transition 
+- transition-duration -- time for transition to apply 
+- transition-timing-function -- how you want the property to transition 
+- transition-delay -- specifies the delay for the transition 
+- to select all properties in single property -- transition :width (property) 35 (duration) ease-in (timing-function) 25 (delay);
+
+
+** Css animations 
+- used to animate css properties with more control 
+- we can use @keyframes rule to chnage the animation from a given style to a new style 
+- @keyframes guri{
+  from{width:20px;}
+  to{width:30px;}
+  }
+
+***  properties to add animattions 
+- animation-name -- name of the animation 
+- animation-duration -- duration of animation runs 
+- animation-timing-function -- speed curve of animation 
+- animation-delay -- delay for the start of the animation 
+- animarion-iteration-count -- no of times an animation will repeat 
+- animation-direction -- specifies the diraction of the animation 
+
+
+*** Animation shorthand 
+- animation: guri (name) 65 (duration) linear (timing-function) 15 (delay) infinite (repeat) reverse (dieraction) 
+
+*** Using percentage value states with animation 
+- we csn use % values to indicate what should happen when a certain percent of animation is completed 
+- @keyframes guri{
+  0%{
+    width:10px; 
+  }
+  50%{
+    width:70px;
+  }
+  100%{
+    width:200px;
+  }
+  }
