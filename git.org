@@ -24,12 +24,6 @@
 - git commit --m  - to add any message and commit
 - git add --a - to add any file 
 - git log - to check all the previous data
-- rm -rf .git - remove the content from git 
-- pwd - present working directory
-- ls - list content 
-- cd - open file
-- q- quit
-- touch - to make any file
 
 ** file status lifecyle 
 - untracked
@@ -71,3 +65,4 @@
 
 # TODO
 - ssh setup
+- remote commands

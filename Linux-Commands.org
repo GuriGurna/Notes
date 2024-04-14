@@ -173,3 +173,7 @@ e : execute
     yum check update
 
    *
+
+- pwd - present working directory
+- cd - open file
+- q - quit
