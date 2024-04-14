@@ -67,4 +67,7 @@
 - git checkout -b name -to make a new branch also  move into new branch
 
 ** git merge - to merge any branches 
-- git branch branch name -to name new branch 
+- git branch branch name -to name new branch
+
+# TODO
+- ssh setup
